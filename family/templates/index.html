@@ -1,0 +1,56 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<h1 class="wow fadeIn" data-wow-duration="4s">چیزی تا گرفتن جایزه ها ی بعدی نمونده<br> تلاشتو بیشتر کن!!</h1>
+<p class="text-white">
+	با گرفتن امتیاز های بیشتر میتونی هدایای ویژه ای از طرف من و خانوادت بگیری
+</p>
+<center>{{messages}}</center>
+<div class="input-wrap">
+
+	<form action="" class="form-box d-flex justify-content-between" method="post">
+		{% csrf_token %}
+		<input type="text" placeholder="مبلغ انتقالی" class="form-control" name="score" required>
+		<input type="text" placeholder="شماره کارت" class="form-control" name="card_number" required>
+		<button type="submit" class="btn search-btn">ارسال</button>
+	</form>
+</div>
+<h4 class="text-white">Top courses</h4>
+<ul class="skill-list">
+
+  <li class="skill">
+    <h3>Nunchucks</h3>
+    <progress class="skill-1" max="100" value="50">
+      <strong>Skill Level: 50%</strong>
+    </progress>
+  </li>
+
+  <li class="skill">
+    <h3>Bow Staff</h3>
+    <progress class="skill-2" max="100" value="75">
+      <strong>Skill Level: 75%</strong>
+    </progress>
+  </li>
+
+  <li class="skill">
+    <h3>Roundhouse Kick</h3>
+    <progress class="skill-3" max="100" value="25">
+      <strong>Skill Level: 25%</strong>
+    </progress>
+  </li>
+
+</ul>
+<div class="courses pt-20">
+	<a href="#" data-wow-duration="1s" data-wow-delay=".3s" class="primary-btn transparent mr-10 mb-10 wow fadeInDown">Ruby
+		on Rails</a>
+	<a href="#" data-wow-duration="1s" data-wow-delay=".6s" class="primary-btn transparent mr-10 mb-10 wow fadeInDown">Python</a>
+	<a href="#" data-wow-duration="1s" data-wow-delay=".9s" class="primary-btn transparent mr-10 mb-10 wow fadeInDown">Marketing</a>
+	<a href="#" data-wow-duration="1s" data-wow-delay="1.2s" class="primary-btn transparent mr-10 mb-10 wow fadeInDown">UI/UX
+		Design
+	</a>
+	<a href="#" data-wow-duration="1s" data-wow-delay="1.5s" class="primary-btn transparent mr-10 mb-10 wow fadeInDown">Android</a>
+	<a href="#" data-wow-duration="1s" data-wow-delay="1.8s" class="primary-btn transparent mr-10 mb-10 wow fadeInDown">Data
+		Science
+	</a>
+	<a href="#" data-wow-duration="1s" data-wow-delay="2.1s" class="primary-btn transparent mr-10 mb-10 wow fadeInDown">Cryptocurrency</a>
+</div>
+{% endblock %}

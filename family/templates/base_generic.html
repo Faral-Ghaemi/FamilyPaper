@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+    {% load static %}
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="{% static 'img/fav.png' %}">
+	<!-- Author Meta -->
+	<meta name="author" content="codepixer">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>خانواده کاغذی</title>
+
+	<!--
+			Google Font
+			============================================= -->
+
+
+	<!--
+			CSS
+			============================================= -->
+
+	<link rel="stylesheet" href="{% static 'css/linearicons.css' %}">
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+	<link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+	<link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+	<link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+
+<body>
+
+	<!-- Start Header Area -->
+	<header id="header">
+		<div class="container">
+			<div class="row align-items-center justify-content-between d-flex">
+				<div id="logo">
+					<a href="index.html"><img src="{% static 'img/logo.png' %}" alt="" title="" /></a>
+				</div>
+				<nav id="nav-menu-container">
+					<ul class="nav-menu">
+						<li class="menu-active"><a href="#l">موجودی شما : {{children.score}}</a></li>
+						<li><a href="about.html">لول شما : {{children.level}}</a></li>
+						<li><a href="courses.html">Courses</a></li>
+						<li class="menu-has-children"><a href="">بقیه اعضای خانواده</a>
+							<ul>
+                {% for child in family %}
+								<li><a href="elements.html">{{child.Name}} --------- {{child.score}}</a></li>
+                {% endfor %}
+							</ul>
+						</li>
+						<li class="menu-has-children"><a href="">Blog</a>
+							<ul>
+								<li><a href="blog-home.html">Blog Home</a></li>
+								<li><a href="blog-single.html">Blog Details</a></li>
+							</ul>
+						</li>
+						<li><a href="contact.html"></a></li>
+					</ul>
+				</nav><!-- #nav-menu-container -->
+			</div>
+		</div>
+	</header>
+	<!-- End Header Area -->
+
+
+	<!-- Start Banner Area -->
+	<section class="home-banner-area relative">
+		<div class="container">
+			<div class="row fullscreen d-flex align-items-center justify-content-center">
+				<div class="banner-content col-lg-8 col-md-12">
+          {% block content %}
+					<h1 class="wow fadeIn" data-wow-duration="4s">چیزی تا گرفتن جایزه ها ی بعدی نمونده<br> تلاشتو بیشتر کن</h1>
+					<p class="text-white">
+						با گرفتن امتیاز های بیشتر میتونی هدایای ویژه ای از طرف من و خانوادت بگیری
+					</p>
+
+					<div class="input-wrap">
+						<form action="" class="form-box d-flex justify-content-between">
+							<input type="text" placeholder="Search Courses" class="form-control" name="username">
+							<button type="submit" class="btn search-btn">Search</button>
+						</form>
+					</div>
+					<h4 class="text-white">Top courses</h4>
+
+					<div class="courses pt-20">
+						<a href="#" data-wow-duration="1s" data-wow-delay=".3s" class="primary-btn transparent mr-10 mb-10 wow fadeInDown">Ruby
+							on Rails</a>
+						<a href="#" data-wow-duration="1s" data-wow-delay=".6s" class="primary-btn transparent mr-10 mb-10 wow fadeInDown">Python</a>
+						<a href="#" data-wow-duration="1s" data-wow-delay=".9s" class="primary-btn transparent mr-10 mb-10 wow fadeInDown">Marketing</a>
+						<a href="#" data-wow-duration="1s" data-wow-delay="1.2s" class="primary-btn transparent mr-10 mb-10 wow fadeInDown">UI/UX
+							Design
+						</a>
+						<a href="#" data-wow-duration="1s" data-wow-delay="1.5s" class="primary-btn transparent mr-10 mb-10 wow fadeInDown">Android</a>
+						<a href="#" data-wow-duration="1s" data-wow-delay="1.8s" class="primary-btn transparent mr-10 mb-10 wow fadeInDown">Data
+							Science
+						</a>
+						<a href="#" data-wow-duration="1s" data-wow-delay="2.1s" class="primary-btn transparent mr-10 mb-10 wow fadeInDown">Cryptocurrency</a>
+					</div>
+          {% endblock %}
+				</div>
+			</div>
+		</div>
+		<div class="rocket-img">
+			<img src="{% static 'img/rocket.png' %}" alt="">
+		</div>
+	</section>
+	<!-- End Banner Area -->
+
+	<!-- ####################### Start Scroll to Top Area ####################### -->
+	<div id="back-top">
+		<a title="Go to Top" href="#"></a>
+	</div>
+	<!-- ####################### End Scroll to Top Area ####################### -->
+
+	<script src="{% static 'js/vendor/jquery-2.2.4.min.js' %}"></script>
+
+	<script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+
+	<script src="{% static 'js/easing.min.js' %}"></script>
+	<script src="{% static 'js/hoverIntent.js' %}"></script>
+	<script src="{% static 'js/superfish.min.js' %}"></script>
+	<script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+	<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'js/owl-carousel-thumb.min.js' %}"></script>
+	<script src="{% static 'js/jquery.sticky.js' %}"></script>
+	<script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+	<script src="{% static 'js/parallax.min.js' %}"></script>
+	<script src="{% static 'js/waypoints.min.js' %}"></script>
+	<script src="{% static 'js/wow.min.js' %}"></script>
+	<script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+	<script src="{% static 'js/mail-script.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
