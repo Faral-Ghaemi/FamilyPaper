@@ -1,4 +1,5 @@
 """
+<!-- Powered by FaraPy. https://faral.tech/  -->
 WSGI config for FamilyPaper project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
